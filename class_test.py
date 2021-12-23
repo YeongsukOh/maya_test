@@ -1,13 +1,30 @@
 import maya.cmds as cmds
 import maya.mel as mel
 
+#global valuable
+NAME_TOOL = 'CALCULATOR_VER_1_1'
+
 class Calculator:
     
     def __init__(self):
-        self.attrA = 'YEONGSUK'
+        #local valuable
+        self.nameValSum = 'SUM :'
+        self.valA = 3
+        self.valB = 5
+  
+    # added arguments
+    def add(self, *args):
         
-    def add(self, a, b):
-        print a + b
+        valA = self.valA
+        valB = self.valB
+        
+        if len(args) == 2:
+            valA = args[0]
+            valB = args[1]
+        
+        valF = valA + valB
+        print NAME_TOOL
+        return valF
     
     def sub(self, a, b):
         print a - b
@@ -20,6 +37,21 @@ class Calculator:
         
 cal = Calculator()
 
-cal.mul(3,4)
+# it can be changed to new val
+cal.valA = 10
+cal.valB
 
-cal.attrA
+cal.add(5,30)
+cal.add()
+
+#python command only
+round(2.12314123, 2)
+
+# array + array
+arrayA = [1,2,3]
+arrayB = ['A','B','C']
+arrayC = arrayA + arrayB
+
+# reverse command
+arrayC.reverse()
+reversed.arrayC

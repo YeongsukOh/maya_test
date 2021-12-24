@@ -23,7 +23,7 @@ class Calculator:
             valB = args[1]
         
         valF = valA + valB
-        print NAME_TOOL
+        print NAME_TOOL, valF
         return valF
     
     def sub(self, a, b):
@@ -54,4 +54,3 @@ arrayC = arrayA + arrayB
 
 # reverse command
 arrayC.reverse()
-reversed.arrayC
